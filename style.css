@@ -1,0 +1,152 @@
+/* 480
+768 */
+
+:root{
+    --primary-color: black;
+    --secondary-color: white;
+    --background-image: linear-gradient(pink, yellow);
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.big-screen-nav {
+    display: none;
+}
+
+.small-screen-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: var( --secondary-color);
+    color: var(--primary-color);
+    border-bottom: 1px solid black;
+}
+
+.small-screen-nav {
+    position: relative;
+}
+
+
+
+.small-screen-list {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    background-color: rgba(210, 94, 113, 0.507);
+    /* border: 1px solid black; */
+    padding: 5px;
+    top: 15px;
+    
+    left: 10px
+}
+
+
+
+.small-screen-list li {
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    
+}
+
+.small-screen-list li a {
+    text-decoration: none;
+    
+}
+
+.menu-icon:hover + .small-screen-list{
+    display: block;
+    
+}
+
+.small-screen-list:hover {
+    display: block;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+main {
+    position: relative;
+}
+
+main img {
+    width: 100%;
+    
+}
+
+.content {
+    position: absolute;
+    /* border: 1px solid blue; */
+    padding: 20px;
+    background-color: rgba(208, 114, 90, 0.728);
+    width: 50%;
+    top: 20%;
+    color: white;
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.first {
+    font-size: 5vw;
+    font-weight: 500;
+}
+
+.second {
+    display: inline-block;
+    font-size: 0.5em;
+    line-height: 1;
+    font-weight:lighter;
+
+}
+
+
+@media screen and (min-width: 821px) {
+
+    .small-screen-nav {
+        display: none;
+    }
+
+
+    .big-screen-nav {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid black
+        
+    }
+
+    .big-screen-nav {
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+    
+
+    .big-screen-nav ul {
+        display: flex;
+        list-style-type: none;
+        gap: 8vw;
+
+    }
+
+    .big-screen-nav ul li a{
+        text-decoration: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+
+    .icons {
+        position: absolute;
+        right: 20px
+    }
+    
+}
